@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Make Users
+%w(Ed Matthew Nerissa Ya-An).each do |name|
+  User.create email: name+"@rails.com", password: 'password'
+end
+
+# Make Teams
+%w(MainStacks IDX Danceworx Movement).each do |name|
+  Team.create name: name, semester_id: 1
+end
+
+# Make Semester
+%w(Spring).each do |season|
+	Semester.create season: season, year: 2016
+end
