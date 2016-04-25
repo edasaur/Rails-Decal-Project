@@ -2,15 +2,21 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :admins
   #Once there's a dashboard page should uncomment and set root
-  #authenticated :user do
-  #  root :to => "wathever#index"
-  #end
+  authenticated :user do
+    root :to => "users#index"
+  end
   unauthenticated :user do
     devise_scope :user do  
       get "/" => "devise/sessions#new"
     end 
   end 
-
+ 
+  resources :home
+  resources :users
+  resources :teams
+  resources :semesters
+  #patch '/accept', to: 'users#accept', as: 'accept'
+  #patch '/apply', to: 'teams#apply', as: 'apply'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
