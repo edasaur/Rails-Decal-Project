@@ -1,4 +1,6 @@
 <h1>USER</h1>
 
 Hi, your email is <%=current_user.email%>
+<br>
 
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
