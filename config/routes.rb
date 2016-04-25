@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+  #Once there's a dashboard page should uncomment and set root
+  #authenticated :user do
+  #  root :to => "wathever#index"
+  #end
+  unauthenticated :user do
+    devise_scope :user do  
+      get "/" => "devise/sessions#new"
+    end 
+  end 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
