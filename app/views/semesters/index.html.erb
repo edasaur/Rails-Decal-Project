@@ -1,1 +1,17 @@
-<h1> SEMESTER PAGE </h1>
+<h1> All Semesters </h1>
+<div class="container">
+  <div class="row">
+    <h3>Semesters</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @semesters.each do |semester| %>
+            <tr>
+              <%= render semester %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -5,10 +5,10 @@ class UsersController < ApplicationController
 
   def apply
   	@user = User.find(params[:id])
-	@team = Team.find(params[:id])
-	@user.update_attribute(:team, team)
-	@user.save
-	redirect_to '/'  	
+	  @team = Team.find(params[:id])
+  	@user.update_attribute(:team, team)
+  	@user.save
+	  redirect_to '/'  	
   end	
 
 

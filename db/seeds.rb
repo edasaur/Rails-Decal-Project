@@ -8,7 +8,7 @@
 
 # Make Users
 %w(Ed Matthew Nerissa Ya-An).each do |name|
-  User.create email: name+"@rails.com", password: 'password'
+  User.create name: name, email: name+"@rails.com", password: 'password'
 end
 
 # Make Teams
@@ -17,6 +17,6 @@ end
 end
 
 # Make Semester
-%w(Spring).each do |season|
+%w(Spring Fall).each do |season|
 	Semester.create season: season, year: 2016
 end
