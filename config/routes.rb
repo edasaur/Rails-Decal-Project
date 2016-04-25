@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_for :admins
   #Once there's a dashboard page should uncomment and set root
   authenticated :user do
     root :to => "users#index"
