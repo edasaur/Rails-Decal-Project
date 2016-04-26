@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-require 'calendar_styles/grey'
+/*require 'calendar_styles/grey'*/
 
 #page {
 	background-color: white;
