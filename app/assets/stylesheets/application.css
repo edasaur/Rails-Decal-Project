@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+require 'calendar_styles/grey'
 
 #page {
 	background-color: white;
@@ -34,10 +35,20 @@
 	margin-bottom: 410px;
 }
 
-
 .column {
 	margin-top: 50px;
 	text-align: center;
 	margin-left: 45%;
 	margin-bottom: 410px;
+}
+
+#semester {
+	text-align: center;
+	width: 100%;
+}
+
+#calendars {
+	text-align: center;
+	width: 50%;
+	margin-left: 43.5%;
 }

@@ -1,2 +1,24 @@
-<h3>Semester</h3>
-<p><%= @semester.season if @semester.season %> <%= @semester.year if @semester.year %></p>
+<h3 id='semester'>Semester</h3>
+<p id = 'semester'><%= @semester.season if @semester.season %> <%= @semester.year if @semester.year %></p>
+<div id='calendars'>
+<% if @semester.season == 'Spring' %>
+	<%= calendar(:year => @semester.year, :month => 3)%>
+	<br>
+	<%= calendar(:year => @semester.year, :month => 4)%>
+	<br>
+	<%= calendar(:year => @semester.year, :month => 5)%>
+	<br>
+	<%= calendar(:year => @semester.year, :month => 6)%>
+	<br>
+<% else %>
+	<%= calendar(:year => @semester.year, :month => 9)%>
+	<br>
+	<%= calendar(:year => @semester.year, :month => 10)%>
+	<br>
+	<%= calendar(:year => @semester.year, :month => 11)%>
+	<br>
+	<%= calendar(:year => @semester.year, :month => 12)%>
+	<br>
+<% end %>
+</div>
+
