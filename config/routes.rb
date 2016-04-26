@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end 
   
   patch "apply", to: "users#apply"
+  patch "join", to: "users#join"
   resources :home
   resources :users
   resources :teams

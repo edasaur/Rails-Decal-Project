@@ -11,5 +11,11 @@ class UsersController < ApplicationController
 	  redirect_to '/'  	
   end	
 
-
+  def join
+    @semester = Semester.find(params[:id])
+    @user = current_user
+    @user.team.update_attribute(:semester, @semester)
+    @user.team.save
+    redirect_to '/'
+  end
 end

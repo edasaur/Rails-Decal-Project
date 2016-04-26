@@ -1,5 +1,6 @@
 <h3>Team</h3>
 <p> Name: <%= @team.name if @team.name %></p>
+<p> Semester: <%= @team.semester.season.concat(' ').concat(@team.semester.year.to_s) if @team.semester %></p>
 <br>
 <%= button_to "Apply to a team", apply_path(id: @team), :class => "button medium", :method => :patch %>
 <br>

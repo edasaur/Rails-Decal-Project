@@ -1,5 +1,18 @@
 <h3 id='semester'>Semester</h3>
 <p id = 'semester'><%= @semester.season if @semester.season %> <%= @semester.year if @semester.year %></p>
+<div id='semester'>
+<% if current_user.admin == true %>
+	<%= button_to "Join Semester", join_path(id: @semester), :class => "button medium", :method => :patch %>
+<%end%>
+Team List<ul>
+  <% Team.all.entries.each do |team|%>
+    <% if team.semester == @semester %>
+      <li><%= render team %></li>
+    <% end %>
+  <% end %>
+</ul>
+</div>
+<br>
 <div id='calendars'>
 <% if @semester.season == 'Spring' %>
 	<%= calendar(:year => @semester.year, :month => 3)%>
