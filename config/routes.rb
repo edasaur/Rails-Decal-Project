@@ -9,7 +9,8 @@ Rails.application.routes.draw do
       get "/" => "devise/sessions#new"
     end 
   end 
- 
+  
+  patch "apply", to: "users#apply"
   resources :home
   resources :users
   resources :teams

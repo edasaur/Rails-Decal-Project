@@ -1,7 +1,11 @@
 <h3>Team</h3>
 <p> Name: <%= @team.name if @team.name %></p>
+<br>
+<%= button_to "Apply to a team", apply_path(id: @team), :class => "button medium", :method => :patch %>
+<br>
+
 User List<ul>
   <% @team.users.each do |user| %>
-    <li> <%=user.name%>, Age: <%=user.age%> </li>
+    <li> <%=user.name%>, Email: <%=user.email%> </li>
   <% end %>
 </ul>
