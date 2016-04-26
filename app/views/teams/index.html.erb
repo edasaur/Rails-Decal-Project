@@ -1,17 +1,20 @@
-<h1> All Teams </h1>
-<div class="container">
-  <div class="row">
-    <h3>Teams</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @teams.each do |team| %>
-            <tr>
-              <%= render team %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+<div id='teams'>
+  <h1 id = 'allteams'> All Teams </h1>
+    <div class="container">
+    <div class="row">
+      <h3>Teams</h3>
+      <div class="column">
+        <table class="table">
+          <tbody>
+            <% @teams.each do |team| %>
+              <tr>
+                <%= render team %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 </div>

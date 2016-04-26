@@ -28,18 +28,18 @@ ActiveRecord::Schema.define(version: 20160425012351) do
     t.datetime "updated_at"
   end
 
-  create_table "semesters", force: :cascade do |t|
-    t.string   "season"
-    t.integer  "year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "semester_id"
+  end
+
+  create_table "semesters", force: :cascade do |t|
+    t.string   "season"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "year"
   end
 
   create_table "users", force: :cascade do |t|
