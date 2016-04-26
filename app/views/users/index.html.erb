@@ -1,3 +1,5 @@
+<div id='page'>
+
 <h1>Hello, <%=current_user.name%>. </h1>
 
 Name: <%=current_user.name%>
@@ -26,3 +28,4 @@ Team: <% if current_user.team %>
 <br>
 <br>
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+</div>
